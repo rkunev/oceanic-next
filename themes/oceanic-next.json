@@ -13,7 +13,7 @@
         "border.selected": "#cbcdf6ff",
         "border.transparent": "#00000000",
         "border.disabled": "#d3d3d4ff",
-        "elevated_surface.background": "#1b2b34ff",
+        "elevated_surface.background": "#12262fff",
         "surface.background": "#1b2b34ff",
         "background": "#12262fff",
         "element.background": "#12262fff",
@@ -25,7 +25,7 @@
         "ghost_element.background": null,
         "ghost_element.hover": "#2f434eff",
         "ghost_element.active": "#152c35ff",
-        "ghost_element.selected": "#4b6f7bff",
+        "ghost_element.selected": "#152c35ff",
         "ghost_element.disabled": "#1b2b34ff",
         "text": "#cdd3deff",
         // #65737eff is the better neutral dark grey that is more readable
@@ -66,7 +66,7 @@
         "editor.invisible": "#65737eff",
         "editor.wrap_guide": "#383a410d",
         "editor.active_wrap_guide": "#383a411a",
-        "editor.document_highlight.read_background": "#4b6f7bff",
+        "editor.document_highlight.read_background": "#4b6f7b44",
         "editor.document_highlight.write_background": "#a3a3a466",
         "terminal.background": "#152c35ff",
         "terminal.foreground": "#cdd3deff",
@@ -300,7 +300,7 @@
             "font_weight": null
           },
           "punctuation.bracket": {
-            "color": "#5fb3b3ff",
+            "color": "#cdd3deff",
             "font_style": null,
             "font_weight": null
           },
@@ -360,7 +360,7 @@
             "font_weight": 400
           },
           "type": {
-            "color": "#cdd3deff",
+            "color": "#6699ccff",
             "font_style": null,
             "font_weight": null
           },
