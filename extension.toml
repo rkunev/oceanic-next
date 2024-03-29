@@ -1,0 +1,7 @@
+id = "oceanic-next"
+name = "Oceanic Next Theme"
+version = "0.1.0"
+schema_version = 1
+authors = ["Rosen Kanev <rkunev@gmail.com"]
+description = "Minimalist dark theme, a port of the popular Oceanic Next with slight changes."
+repository = "https://github.com/rkunev/oceanic-next"
