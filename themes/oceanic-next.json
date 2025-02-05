@@ -19,7 +19,7 @@
                 "element.background": "#12262fff",
                 "element.hover": "#1b3a40ff",
                 "element.active": "#1b2b34ff",
-                "element.selected": "#5fb3b3ff",
+                "element.selected": "#ffd700ff",
                 "element.disabled": "#1b2b34ff",
                 "drop_target.background": "#4b6f7bff",
                 "ghost_element.background": null,
