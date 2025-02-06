@@ -1,6 +1,6 @@
 id = "oceanic-next"
 name = "Oceanic Next Theme"
-version = "0.2.0"
+version = "0.3.0"
 schema_version = 1
 authors = ["Rosen Kanev <rkunev@gmail.com"]
 description = "Minimalist dark theme, a port of the popular Oceanic Next with slight changes."
