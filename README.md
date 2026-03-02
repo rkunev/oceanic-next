@@ -4,19 +4,15 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ## Preview
 
-![javascript](/screenshots/javascript.jpeg)
+![javascript](/screenshots/baseline/02-file-jsx.png)
 
-![rust](/screenshots/rust.jpeg)
+![bash](/screenshots/baseline/05-file-shell.png)
 
-![bash](/screenshots/bash.jpeg)
+![markdown](/screenshots/baseline/04-file-markdown.png)
 
-![markdown](/screenshots/markdown.jpeg)
+![cmd-palette](/screenshots/baseline/12-command-palette.png)
 
-![json](/screenshots/json.jpeg)
-
-![cmd-palette](/screenshots/cmd-palette.jpeg)
-
-![terminal](/screenshots/terminal.jpeg)
+![terminal](/screenshots/baseline/09-terminal.png)
 
 ## Companion config & tweaks
 
