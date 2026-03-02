@@ -66,11 +66,11 @@ tell application "System Events"
 		click menu item "Cut" of menu 1 of menu bar item "Edit" of menu bar 1
 		click menu item "Save" of menu 1 of menu bar item "File" of menu bar 1
 		tell me to do shell script "touch ./fixtures/new-file.txt"
+		tell me to do shell script "rm ./fixtures/empty.txt"
 		set output to output & captureAndCompare("07-project-panel-git.png", rect) of me
 
 		tell me to do shell script "/opt/homebrew/bin/cliclick c:" & {x + 45, y + height - 20} as string
-		tell me to do shell script "/opt/homebrew/bin/cliclick c:" & {x + 50, y + height - 100} as string
-		tell me to do shell script "/opt/homebrew/bin/cliclick kp:return"
+		tell me to do shell script "/opt/homebrew/bin/cliclick c:" & {x + 75, y + 110} as string
 		set output to output & captureAndCompare("08-git-panel.png", rect) of me
 		click menu item "Project Panel" of menu 1 of menu bar item "View" of menu bar 1
 
