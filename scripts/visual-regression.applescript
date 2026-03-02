@@ -29,14 +29,12 @@ tell application "System Events"
 
 		-- 1. take a screenshot of an empty project
 		click menu item "Project Panel" of menu 1 of menu bar item "View" of menu bar 1
-		delay 0.2
 		set output to output & captureAndCompare("01-empty-project.png", rect) of me
 
 		-- 2. take a screenshot of a JSX file
 		tell me to do shell script "/usr/local/bin/zed -a ."
 		tell me to do shell script "/usr/local/bin/zed -a ./fixtures/App.jsx"
 		delay 1 -- give the LSP server a second to bootstrap itself and to run the diagnostics
-		delay 0.2
 		set output to output & captureAndCompare("02-file-jsx.png", rect) of me
 
 		-- 3. take a screenshot of a TS info popover and error popover
@@ -53,17 +51,14 @@ tell application "System Events"
 
 		-- 4. take a screenshot of a Markdown file
 		tell me to do shell script "/usr/local/bin/zed -a ./fixtures/README.md"
-		delay 0.2
 		set output to output & captureAndCompare("04-file-markdown.png", rect) of me
 
 		-- 5. take a screenshot of a Shell file
 		tell me to do shell script "/usr/local/bin/zed -a ./fixtures/upload-cli.sh"
-		delay 0.2
 		set output to output & captureAndCompare("05-file-shell.png", rect) of me
 
 		-- 6. take a screenshot of the Diagnostics page
 		click menu item "Diagnostics" of menu 1 of menu bar item "View" of menu bar 1
-		delay 0.2
 		set output to output & captureAndCompare("06-diagnostics.png", rect) of me
 		click menu item "Close Editor" of menu 1 of menu bar item "File" of menu bar 1
 
@@ -71,44 +66,40 @@ tell application "System Events"
 		click menu item "Cut" of menu 1 of menu bar item "Edit" of menu bar 1
 		click menu item "Save" of menu 1 of menu bar item "File" of menu bar 1
 		tell me to do shell script "touch ./fixtures/new-file.txt"
-		delay 0.2
 		set output to output & captureAndCompare("07-project-panel-git.png", rect) of me
 
 		tell me to do shell script "/opt/homebrew/bin/cliclick c:" & {x + 45, y + height - 20} as string
 		tell me to do shell script "/opt/homebrew/bin/cliclick c:" & {x + 50, y + height - 100} as string
 		tell me to do shell script "/opt/homebrew/bin/cliclick kp:return"
-		delay 0.2
 		set output to output & captureAndCompare("08-git-panel.png", rect) of me
 		click menu item "Project Panel" of menu 1 of menu bar item "View" of menu bar 1
 
 		-- 8. take a screenshot of the Terminal Panel
 		click menu item "Terminal Panel" of menu 1 of menu bar item "View" of menu bar 1
 		delay 0.2 -- give the Terminal emulator enough time to bootstrap itself
-		delay 0.2
 		set output to output & captureAndCompare("09-terminal.png", rect) of me
 		click menu item "Close All Docks" of menu 1 of menu bar item "View" of menu bar 1
 		click menu item "Project Panel" of menu 1 of menu bar item "View" of menu bar 1
 
 		-- 9. take a screenshot of the file tree hover in Project Panel
     	tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + 45, y + 50} as string
-		delay 0.2
 		set output to output & captureAndCompare("10-file-tree-hover.png", rect) of me
 
 		-- 10. take a screenshot of the Command Palette
         click menu item "Command Palette..." of menu 1 of menu bar item "Go" of menu bar 1
-		delay 0.2
 		set output to output & captureAndCompare("11-command-palette-base.png", rect) of me
     	tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + width div 2, y + 175} as string
-  		delay 0.2
 		set output to output & captureAndCompare("12-command-palette-hover.png", rect) of me
 
 		-- End. Perform clean up.
 		click menu item "Close Window" of menu 1 of menu bar item "File" of menu bar 1
 		tell me to do shell script "rm ./fixtures/new-file.txt"
+        tell me to do shell script "git restore ./fixtures"
 	end tell
 end tell
 
 on captureAndCompare(fn, rect)
+    delay 0.2
     tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/target/" & fn
     tell me to set diff to do shell script "magick compare ./screenshots/baseline/" & fn & " ./screenshots/target/" & fn & " -compose Src ./screenshots/diff/" & fn & " 2>&1 || true"
 
@@ -116,6 +107,3 @@ on captureAndCompare(fn, rect)
 end captureAndCompare
 
 return output
-
--- clean up after script
--- do shell script "git restore ./.zed ./fixtures"

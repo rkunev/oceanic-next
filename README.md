@@ -10,7 +10,7 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ![markdown](/screenshots/baseline/04-file-markdown.png)
 
-![cmd-palette](/screenshots/baseline/12-command-palette.png)
+![cmd-palette](/screenshots/baseline/12-command-palette-base.png)
 
 ![terminal](/screenshots/baseline/09-terminal.png)
 
