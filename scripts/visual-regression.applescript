@@ -1,3 +1,7 @@
+-- @todo I don't need the 10-file-tree-hover.png any more,
+-- because when I move the mouse to click on the Git Panel entry
+-- and close the Git Panel then the mouse is already hovering on one of the items
+-- and I should include some text in the new-file.txt to make it more real in the Git Panel
 set AppleScript's text item delimiters to {","}
 
 set output to "name,diff\n"
