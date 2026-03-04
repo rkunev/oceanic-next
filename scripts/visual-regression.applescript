@@ -8,9 +8,11 @@ tell application "Finder"
 	set displayHeight to item 4 of displayBounds
 end tell
 
+do shell script "rm -f ./screenshots/target/*.png ./screenshots/diff/*.png"
+
 -- open an empty project for the first test
 -- ensures Zed is running before we reach `tell application process "Zed"`
-tell me to do shell script "/usr/local/bin/zed -n"
+do shell script "/usr/local/bin/zed -n"
 
 tell application "System Events"
 	tell application process "Zed"
