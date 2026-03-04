@@ -30,7 +30,7 @@ There are a 2 AppleScript files in the `scripts` directory. One for taking the s
 - [ ] Close all open file tabs. `cmd-k w` should do the trick. Already opened tabs might come up as a delta.
 - [ ] Quit Zed. Otherwise a second window might be also visible in the screenshots.
 - [ ] Run from the root dir of the repo.
-- [ ] Run only with a clean `git status`. 
+- [ ] Run only with a clean `git status` and on `main` branch. 
 - [ ] (Optional) Maximize (a.k.a Fill) and clear your terminal where you'll run the script. `screencapture` takes screenshots of a specified rectangle of your screen and the baseline screenshots were taken with a solid dark background that can be seen in the area behind the rounded corners of the app's window. If you don't maximize & clear the screenshot comparison will highlight those edges as a delta.
 - [ ] (Optional) The docs screenshots were taken with "Reservoir Day" live wallpaper on macOS Tahoe. 
 

@@ -1,7 +1,3 @@
--- @todo I don't need the 10-file-tree-hover.png any more,
--- because when I move the mouse to click on the Git Panel entry
--- and close the Git Panel then the mouse is already hovering on one of the items
--- and I should include some text in the new-file.txt to make it more real in the Git Panel
 set AppleScript's text item delimiters to {","}
 
 set output to "name,diff\n"
@@ -69,7 +65,7 @@ tell application "System Events"
 		-- 7. take a screenshot of the git changes in the project panel and the git panel
 		click menu item "Cut" of menu 1 of menu bar item "Edit" of menu bar 1
 		click menu item "Save" of menu 1 of menu bar item "File" of menu bar 1
-		tell me to do shell script "touch ./fixtures/new-file.txt"
+		tell me to do shell script "echo 'hello world' > ./fixtures/new-file.txt"
 		tell me to do shell script "rm ./fixtures/empty.txt"
 		set output to output & captureAndCompare("07-project-panel-git.png", rect) of me
 
@@ -85,15 +81,11 @@ tell application "System Events"
 		click menu item "Close All Docks" of menu 1 of menu bar item "View" of menu bar 1
 		click menu item "Project Panel" of menu 1 of menu bar item "View" of menu bar 1
 
-		-- 9. take a screenshot of the file tree hover in Project Panel
-    	tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + 45, y + 50} as string
-		set output to output & captureAndCompare("10-file-tree-hover.png", rect) of me
-
-		-- 10. take a screenshot of the Command Palette
+		-- 9. take a screenshot of the Command Palette
         click menu item "Command Palette..." of menu 1 of menu bar item "Go" of menu bar 1
-		set output to output & captureAndCompare("11-command-palette-base.png", rect) of me
+		set output to output & captureAndCompare("10-command-palette-base.png", rect) of me
     	tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + width div 2, y + 175} as string
-		set output to output & captureAndCompare("12-command-palette-hover.png", rect) of me
+		set output to output & captureAndCompare("11-command-palette-hover.png", rect) of me
 
 		-- End. Perform clean up.
 		click menu item "Close Window" of menu 1 of menu bar item "File" of menu bar 1
