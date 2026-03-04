@@ -26,9 +26,13 @@ Screenshots from the preview were generated with this extra config:
 
 There are a 2 AppleScript files in the `scripts` directory. One for taking the screenshots for the documentation and another that performs visual regression testing. In order to have maximum repeatability in screenshots, especially important during visual regression testing, here's a preflight checklist:
 - [ ] Install [cliclick](https://formulae.brew.sh/formula/cliclick). It automates mouse movements and clicks.
+- [ ] Provide autmation permissions to your terminal app:
+    - [ ] Accessibility permissions: Settings -> Privacy & Security -> Accessibility
+    - [ ] Autmation permissions: Settings -> Privacy & Security -> Automation
+    - [ ] Screen & System Audio Recording permissions: Settings -> Privacy & Security -> Screen & System Audio Recording
 - [ ] Hide desktop items: Settings -> Desktop & Dock -> Show items. Otherwise they might be visible in the docs screenshots. 
 - [ ] Add `"cursor_blink": false` to Zed's settings. Blinking cursors might come up as a delta.
-- [ ] Close all open file tabs. `cmd-k w` should do the trick. Already opened tabs might come up as a delta.
+- [ ] Close all open file tabs. `cmd-k w` should do the trick. Already opened tabs might come up as a delta. Close the Buffer Search toolbar too (pressing `Esc` should suffice).
 - [ ] Quit Zed. Otherwise a second window might be also visible in the screenshots.
 - [ ] Run from the root dir of the repo.
 - [ ] Run only with a clean `git status` and on `main` branch. 
