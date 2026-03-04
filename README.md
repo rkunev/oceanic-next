@@ -25,6 +25,7 @@ Screenshots from the preview were generated with this extra config:
 ## Contributing
 
 There are a 2 AppleScript files in the `scripts` directory. One for taking the screenshots for the documentation and another that performs visual regression testing. In order to have maximum repeatability in screenshots, especially important during visual regression testing, here's a preflight checklist:
+- [ ] Install [cliclick](https://formulae.brew.sh/formula/cliclick). It automates mouse movements and clicks.
 - [ ] Hide desktop items: Settings -> Desktop & Dock -> Show items. Otherwise they might be visible in the docs screenshots. 
 - [ ] Add `"cursor_blink": false` to Zed's settings. Blinking cursors might come up as a delta.
 - [ ] Close all open file tabs. `cmd-k w` should do the trick. Already opened tabs might come up as a delta.

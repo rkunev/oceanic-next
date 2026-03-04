@@ -1,8 +1,8 @@
 interface User {
-  name: string;
-  id: number;
+    name: string;
+    id: number;
 }
 
 const user: User = {
-  id: 0,
+    id: 0,
 };

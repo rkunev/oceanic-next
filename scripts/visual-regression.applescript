@@ -27,6 +27,10 @@ tell application "System Events"
 		set size of window 1 to {width, height}
         set position of window 1 to {x, y}
 		set rect to {x, y, width, height} as string
+
+        -- move the mouse cursor away from the screencapture area
+        tell me to do shell script "/opt/homebrew/bin/cliclick m:75,75"
+
         delay 0.2 -- wait for the macOS animations to complete
 
 		-- 1. take a screenshot of an empty project

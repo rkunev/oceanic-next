@@ -8,7 +8,9 @@ end tell
 
 -- open an empty project for the first test
 -- ensures Zed is running before we reach `tell application process "Zed"`
-tell me to do shell script "/usr/local/bin/zed -n ./fixtures"
+do shell script "/usr/local/bin/zed -n ./"
+
+do shell script "rm -f ./screenshots/docs/*.png"
 
 tell application "System Events"
 	tell application process "Zed"
@@ -29,6 +31,10 @@ tell application "System Events"
 		set rect to {(displayWidth - 1554) div 2, (displayHeight - 978) div 2, 1554, 978} as string
 
 		click menu item "Hide Others" of menu 1 of menu bar item "Zed" of menu bar 1
+
+        -- move the mouse cursor away from the screencapture area
+        tell me to do shell script "/opt/homebrew/bin/cliclick m:75,75"
+
         delay 0.2 -- wait for the macOS animations to complete
 
 		-- 1. take a screenshot of a JSX file
