@@ -51,7 +51,7 @@ tell application "System Events"
 		set output to output & captureAndCompare("03-with-typescript-popover-error.png", rect) of me
 		tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + 400, y + 300} as string
 		delay 0.1 -- wait for Zed to hide the error popover
-		tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + 350, y + 150} as string
+		tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + 370, y + 150} as string
 		delay 0.3 -- Zed/LSP server has a delay of ~300ms to the info display popover
 		set output to output & captureAndCompare("03-with-typescript-popover-info.png", rect) of me
 
