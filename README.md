@@ -24,6 +24,28 @@ Screenshots from the preview were generated with this extra config:
 
 ## Contributing
 
+### Building
+
+One of the quickest feedback loops that I've achieved is through Zed's tasks. The `scripts/theme-generator.js` script interpolates the colors from `src/dark.js` in the `src/theme/template.json` and prints to stdout the theme in JSON format. This can be placed in a custom theme (e.g. `~/.config/zed/themes/oceanic-wip.json`) and the final step is to update Zed's settings to use that theme. Quickest way is `cmd-k cmd-t` (a.k.a Theme Selector). Putting everything together:
+
+```json
+// ~/.config/zed/tasks.json
+[
+  {
+    "label": "Build Oceanic Next (WIP)",
+    "command": "node scripts/theme-generator.js --wip > ~/.config/zed/themes/oceanic-wip.json",
+    "reveal": "never"
+  }
+]
+```
+
+> [!TIP]
+> Spawn a task through the Command Palette and then you can re-run a task with `cmd-alt-r`.
+
+To build the theme for publishing the extension: `node scripts/theme-generator.js > themes/oceanic-next.json`
+
+### Testing
+
 There are a 2 AppleScript files in the `scripts` directory. One for taking the screenshots for the documentation and another that performs visual regression testing. 100% repeatability between screenshots is impractical. The aim is to minimize the delta reported by ImageMagick, but expect to see red diff in the screenshot with the Git Panel and the Terminal dock. In order to achieve that, here's a preflight checklist:
 - [ ] Install [cliclick](https://formulae.brew.sh/formula/cliclick). It automates mouse movements and clicks.
 - [ ] Provide autmation permissions to your terminal app:
