@@ -1,11 +1,11 @@
 {
     "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
-    "name": "Oceanic Next",
+    "name": "Oceanic Next Light",
     "author": "Rosen Kanev",
     "themes": [
         {
-            "name": "Oceanic Next",
-            "appearance": "dark",
+            "name": "Oceanic Next Light",
+            "appearance": "light",
             "style": {
                 "background": "{background}",
                 "surface.background": "{surface_background}",
@@ -57,6 +57,7 @@
                 "editor.document_highlight.write_background": "{editor_document_highlight_write_background}",
                 "editor.document_highlight.bracket_background": "{editor_document_highlight_bracket_background}",
                 "search.match_background": "{search_match_background}",
+                "search.active_match_background": "{search_active_match_background}",
 
                 "status_bar.background": "{status_bar_background}",
                 "title_bar.background": "{title_bar_background}",
@@ -391,7 +392,7 @@
                     "title": {
                         "color": "{syntax_title_color}",
                         "font_style": null,
-                        "font_weight": null
+                        "font_weight": 700
                     },
                     "emphasis": {
                         "color": "{syntax_emphasis_color}",
