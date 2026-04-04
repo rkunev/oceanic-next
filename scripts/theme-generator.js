@@ -1,7 +1,8 @@
 import { parseArgs } from 'node:util';
 
-import theme from '../src/light-theme.template.json' with { type: 'json' };
-import * as darkThemeTokens from '../src/light.js';
+import theme from '../src/theme.template.json' with { type: 'json' };
+import * as darkTheme from '../src/dark.js';
+import * as lightTheme from '../src/light.js';
 
 const args = parseArgs({
     args: process.argv.slice(2),
@@ -25,7 +26,13 @@ function interpolateTokens(key, value) {
                 return match;
             }
 
-            const value = darkThemeTokens[token];
+            let value = darkTheme[token];
+
+            if (typeof value !== 'undefined') {
+                return value;
+            }
+
+            value = lightTheme[token];
 
             if (typeof value !== 'undefined') {
                 return value;
@@ -41,7 +48,4 @@ function interpolateTokens(key, value) {
     return value;
 }
 
-// // @todo I can avoid double stringify -> parse -> stringify if I read the theme template as string and use JSON.parse(tt, reviver) to interpolate the values
-// import { readFileSync } from 'node:fs';
-// const file = readFileSync('./src/theme.template.json', 'utf8');
 console.log(JSON.stringify(theme, interpolateTokens, 4));
