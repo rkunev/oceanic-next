@@ -298,7 +298,7 @@ export const light_syntax_emphasis_color = cyan_600; // Markdown, _italic_
 export const light_syntax_emphasis_strong_color = brown_500; // Markdown, **bolded**
 export const light_syntax_link_text_color = cyan_600;
 export const light_syntax_link_uri_color = blue_600;
-export const light_syntax_selector_color = light_syntax_keyword_color; // @todo no idea what this is, but in one-dark it is the same as constant and in ayu-light it is the same as boolean and syntax_punctuation_special_color
+export const light_syntax_selector_color = light_syntax_keyword_color; // CSS class/id selectors
 export const light_syntax_selector_pseudo_color = light_text; // CSS pseudo
 
 // Other

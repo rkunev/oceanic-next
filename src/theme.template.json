@@ -57,6 +57,7 @@
                 "editor.document_highlight.write_background": "{dark_editor_document_highlight_write_background}",
                 "editor.document_highlight.bracket_background": "{dark_editor_document_highlight_bracket_background}",
                 "search.match_background": "{dark_search_match_background}",
+                "search.active_match_background": "{dark_search_active_match_background}",
 
                 "status_bar.background": "{dark_status_bar_background}",
                 "title_bar.background": "{dark_title_bar_background}",

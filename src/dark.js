@@ -11,6 +11,7 @@ import {
     cyan_900,
     cyan_800,
     cyan_700,
+    cyan_600,
     cyan_500,
     blue_500,
     blue_200,
@@ -72,10 +73,11 @@ export const dark_editor_wrap_guide = dark_panel_indent_guide; // set `"wrap_gui
 export const dark_editor_active_wrap_guide = dark_panel_indent_guide_active;
 export const dark_editor_indent_guide = dark_panel_indent_guide;
 export const dark_editor_indent_guide_active = dark_panel_indent_guide_active;
-export const dark_editor_document_highlight_read_background = withAlpha(cyan_700, 0.27); // highlights the current token (and everywhere it repeats)
+export const dark_editor_document_highlight_read_background = withAlpha(blue_200, 0.1); // highlights the current token (and everywhere it repeats)
 export const dark_editor_document_highlight_write_background = withAlpha(dark_editor_invisible, 0.4); // @todo no idea what this is; other built-in themes use editor_invisible with 40% opacity
-export const dark_editor_document_highlight_bracket_background = withAlpha(cyan_700, 0.27); // adds a background to other occurances of the selection; also adds background for surrounding brackets
-export const dark_search_match_background = cyan_700;
+export const dark_editor_document_highlight_bracket_background = transparent; // adds a background to other occurances of the selection; also adds background for surrounding brackets
+export const dark_search_match_background = withAlpha(cyan_500, 0.15);
+export const dark_search_active_match_background = withAlpha(cyan_600, 0.8);
 
 // Navigation
 export const dark_status_bar_background = dark_background;
@@ -248,7 +250,7 @@ export const dark_syntax_text_literal_color = dark_syntax_string_color;
 // Numbers & Constants
 export const dark_syntax_number_color = orange_500;
 export const dark_syntax_boolean_color = dark_syntax_number_color;
-export const dark_syntax_constant_color = yellow_500;
+export const dark_syntax_constant_color = dark_syntax_number_color;
 
 // Keywords & Operators
 export const dark_syntax_keyword_color = magenta_500;
@@ -287,8 +289,8 @@ export const dark_syntax_emphasis_color = blue_500; // Markdown, _italic_
 export const dark_syntax_emphasis_strong_color = brown_500; // Markdown, **bolded**
 export const dark_syntax_link_text_color = blue_500;
 export const dark_syntax_link_uri_color = dark_syntax_link_text_color;
-export const dark_syntax_selector_color = orange_500; // @todo no idea what this is, but in one-dark it is the same as constant and in ayu-light it is the same as boolean and syntax_punctuation_special_color
-export const dark_syntax_selector_pseudo_color = magenta_500; // CSS pseudo
+export const dark_syntax_selector_color = dark_syntax_keyword_color; // CSS class/id selectors
+export const dark_syntax_selector_pseudo_color = dark_text; // CSS pseudo
 
 // Other
 export const dark_syntax_primary_color = dark_text;
