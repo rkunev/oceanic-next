@@ -287,8 +287,8 @@ export const dark_syntax_tag_color = red_500;
 export const dark_syntax_title_color = orange_500; // Markdown, # headings
 export const dark_syntax_emphasis_color = blue_500; // Markdown, _italic_
 export const dark_syntax_emphasis_strong_color = brown_500; // Markdown, **bolded**
-export const dark_syntax_link_text_color = blue_500;
-export const dark_syntax_link_uri_color = dark_syntax_link_text_color;
+export const dark_syntax_link_text_color = cyan_500;
+export const dark_syntax_link_uri_color = blue_500;
 export const dark_syntax_selector_color = dark_syntax_keyword_color; // CSS class/id selectors
 export const dark_syntax_selector_pseudo_color = dark_text; // CSS pseudo
 

@@ -64,7 +64,7 @@ tell application "System Events"
 		delay 0.2 -- give the Terminal emulator enough time to bootstrap itself
 		delay 0.2
 		tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/05-terminal.png"
-		click menu item "Close All Docks" of menu 1 of menu bar item "View" of menu bar 1
+		click menu item "Toggle Bottom Dock" of menu 1 of menu bar item "View" of menu bar 1
 		click menu item "Project Panel" of menu 1 of menu bar item "View" of menu bar 1
 
 		-- End. Perform clean up.

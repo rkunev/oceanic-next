@@ -49,8 +49,8 @@ tell application "System Events"
 		tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + 400, y + 245} as string
 		delay 0.3 -- Zed/LSP server has a delay of ~300ms to the info display popover
 		set output to output & captureAndCompare("03-with-typescript-popover-error.png", rect) of me
-		tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + 400, y + 300} as string
-		delay 0.1 -- wait for Zed to hide the error popover
+		tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + 900, y + 150} as string
+		delay 0.3 -- wait for Zed to hide the error popover
 		tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + 370, y + 150} as string
 		delay 0.3 -- Zed/LSP server has a delay of ~300ms to the info display popover
 		set output to output & captureAndCompare("03-with-typescript-popover-info.png", rect) of me
@@ -82,15 +82,15 @@ tell application "System Events"
 
 		-- 8. take a screenshot of the Terminal Panel
 		click menu item "Terminal Panel" of menu 1 of menu bar item "View" of menu bar 1
-		delay 0.2 -- give the Terminal emulator enough time to bootstrap itself
+		delay 0.5 -- give the Terminal emulator enough time to bootstrap itself
 		set output to output & captureAndCompare("09-terminal.png", rect) of me
-		click menu item "Close All Docks" of menu 1 of menu bar item "View" of menu bar 1
+		click menu item "Toggle Bottom Dock" of menu 1 of menu bar item "View" of menu bar 1
 		click menu item "Project Panel" of menu 1 of menu bar item "View" of menu bar 1
 
 		-- 9. take a screenshot of the Command Palette
         click menu item "Command Palette..." of menu 1 of menu bar item "Go" of menu bar 1
 		set output to output & captureAndCompare("10-command-palette-base.png", rect) of me
-    	tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + width div 2, y + 175} as string
+    	tell me to do shell script "/opt/homebrew/bin/cliclick m:" & {x + width div 2, y + 150} as string
 		set output to output & captureAndCompare("11-command-palette-hover.png", rect) of me
 
 		-- End. Perform clean up.
