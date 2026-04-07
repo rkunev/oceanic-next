@@ -6,7 +6,7 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ### Side-by-side
 
-<p><img width="50%" src="/screenshots/docs/dark/01-file-jsx.png" alt="dark theme" /><img width="50%" src="/screenshots/docs/light/01-file-jsx.png" alt="light theme" /></p>
+![dark and light themes](/screenshots/docs/result.png)
 
 ---
 
