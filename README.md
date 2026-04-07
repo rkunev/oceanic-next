@@ -6,6 +6,8 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ![javascript](/screenshots/docs/01-file-jsx.png)
 
+<details><summary>Dark Theme</summary>
+    
 ![markdown](/screenshots/docs/02-file-markdown.png)
 
 ![bash](/screenshots/docs/03-file-shell.png)
@@ -13,6 +15,8 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 ![cmd-palette](/screenshots/docs/04-command-palette.png)
 
 ![terminal](/screenshots/docs/05-terminal.png)
+
+</details>
 
 ## Companion config & tweaks
 
@@ -35,8 +39,8 @@ One of the quickest feedback loops that I've achieved is through Zed's tasks. Th
     {
         "label": "Build Oceanic Next (WIP)",
         "command": "node scripts/theme-generator.js --wip > ~/.config/zed/themes/oceanic-wip.json",
-        "reveal": "never"
-    }
+        "reveal": "never",
+    },
 ]
 ```
 
