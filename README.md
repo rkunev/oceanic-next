@@ -4,6 +4,12 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ## Preview
 
+### Side-by-side
+
+![javascript](/screenshots/docs/dark/01-file-jsx.png) ![javascript](/screenshots/docs/light/01-file-jsx.png)
+
+---
+
 ![javascript](/screenshots/docs/dark/01-file-jsx.png)
 
 <details><summary>Dark Theme</summary>
