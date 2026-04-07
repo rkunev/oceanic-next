@@ -20,6 +20,8 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ![terminal](/screenshots/docs/06-terminal.png)
 
+![javascript light](/screenshots/docs/07-file-jsx-light.png)
+
 </details>
 
 ## Companion config & tweaks
@@ -65,6 +67,7 @@ There are a 2 AppleScript files in the `scripts` directory. One for taking the s
 - [ ] Hide desktop items: Settings -> Desktop & Dock -> Show items. Otherwise they might be visible in the docs screenshots.
 - [ ] Add `"cursor_blink": false` to Zed's settings. Blinking cursors might come up as a delta.
 - [ ] Close all open file tabs. `cmd-k w` should do the trick. Already opened tabs might come up as a delta. Close the Buffer Search toolbar too (pressing `Esc` should suffice).
+- [ ] Switch to Light theme variant.
 - [ ] Quit Zed. Otherwise a second window might be also visible in the screenshots.
 - [ ] Run from the root dir of the repo.
 - [ ] Run only with a clean `git status` and on `main` branch.
@@ -74,7 +77,9 @@ There are a 2 AppleScript files in the `scripts` directory. One for taking the s
 ```sh
 # Runs the script for taking the docs screenshots
 osascript scripts/docs-screenshots.applescript
+```
 
+```sh
 # Performs the visual regression and pretty-prints the delta
 osascript scripts/visual-regression.applescript | column -t -s ","
 ```

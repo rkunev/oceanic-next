@@ -44,6 +44,7 @@ tell application "System Events"
         -- take a screenshot with the current (light) theme
 		delay 0.2
         tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/split-light.png"
+        tell me to do shell script "cp ./screenshots/docs/split-light.png ./screenshots/docs/07-file-jsx-light.png"
 
         -- switch to dark theme and take another screenshot
         tell me to do shell script "/opt/homebrew/bin/cliclick kd:cmd t:k kd:shift t:t ku:cmd,shift"
