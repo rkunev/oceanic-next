@@ -4,37 +4,21 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ## Preview
 
-### Side-by-side
-
-![dark and light themes](/screenshots/docs/result.png)
+![dark and light themes](/screenshots/docs/01-split.png)
 
 ---
 
-![javascript](/screenshots/docs/dark/01-file-jsx.png)
+![javascript](/screenshots/docs/dark/02-file-jsx.png)
 
-<details><summary>Dark Theme</summary>
+<details><summary>More Screenshots</summary>
     
-![markdown](/screenshots/docs/dark/02-file-markdown.png)
+![markdown](/screenshots/docs/dark/03-file-markdown.png)
 
-![bash](/screenshots/docs/dark/03-file-shell.png)
+![bash](/screenshots/docs/dark/04-file-shell.png)
 
-![cmd-palette](/screenshots/docs/dark/04-command-palette.png)
+![cmd-palette](/screenshots/docs/dark/05-command-palette.png)
 
-![terminal](/screenshots/docs/dark/05-terminal.png)
-
-</details>
-
-![javascript](/screenshots/docs/light/01-file-jsx.png)
-
-<details><summary>Light Theme</summary>
-    
-![markdown](/screenshots/docs/light/02-file-markdown.png)
-
-![bash](/screenshots/docs/light/03-file-shell.png)
-
-![cmd-palette](/screenshots/docs/light/04-command-palette.png)
-
-![terminal](/screenshots/docs/light/05-terminal.png)
+![terminal](/screenshots/docs/dark/06-terminal.png)
 
 </details>
 
