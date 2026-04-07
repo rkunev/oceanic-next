@@ -29,7 +29,7 @@ Screenshots from the preview were generated with this extra config:
 
 One of the quickest feedback loops that I've achieved is through Zed's tasks. The `scripts/theme-generator.js` script interpolates the colors from `src/dark.js` and `src/light.js` in the `src/theme.template.json` and prints to stdout the theme in JSON format. This can be placed in a custom theme (e.g. `~/.config/zed/themes/oceanic-wip.json`) and the final step is to update Zed's settings to use that theme. Quickest way is `cmd-k cmd-t` (a.k.a Theme Selector). Putting everything together:
 
-```json
+```jsonc
 // ~/.config/zed/tasks.json
 [
     {
