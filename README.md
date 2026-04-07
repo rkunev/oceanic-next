@@ -8,17 +8,17 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ---
 
-![javascript](/screenshots/docs/dark/02-file-jsx.png)
+![javascript](/screenshots/docs/02-file-jsx.png)
 
 <details><summary>More Screenshots</summary>
     
-![markdown](/screenshots/docs/dark/03-file-markdown.png)
+![markdown](/screenshots/docs/03-file-markdown.png)
 
-![bash](/screenshots/docs/dark/04-file-shell.png)
+![bash](/screenshots/docs/04-file-shell.png)
 
-![cmd-palette](/screenshots/docs/dark/05-command-palette.png)
+![cmd-palette](/screenshots/docs/05-command-palette.png)
 
-![terminal](/screenshots/docs/dark/06-terminal.png)
+![terminal](/screenshots/docs/06-terminal.png)
 
 </details>
 
