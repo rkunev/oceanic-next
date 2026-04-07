@@ -8,9 +8,9 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ---
 
+<details><summary><h3>More Screenshots</h3></summary>
+    
 ![javascript](/screenshots/docs/02-file-jsx.png)
-
-<details><summary>More Screenshots</summary>
     
 ![markdown](/screenshots/docs/03-file-markdown.png)
 
