@@ -16,7 +16,7 @@ tell application "System Events"
 	tell application process "Zed"
 		set frontmost to true
 
-		-- with Shottr 1554x978
+		-- with Shottr 1554x932
 		set width to 1440
 		set height to 864
 
@@ -27,8 +27,8 @@ tell application "System Events"
 		set size of window 1 to {width, height}
         set position of window 1 to {x, y}
 
-		-- 1554x978 is the 1440x864 window size + ~8% padding
-		set rect to {(displayWidth - 1554) div 2, (displayHeight - 978) div 2, 1554, 978} as string
+		-- 1554x932 is the 1440x864 window size + ~8% padding
+		set rect to {(displayWidth - 1554) div 2, (displayHeight - 932) div 2, 1554, 932} as string
 
 		click menu item "Hide Others" of menu 1 of menu bar item "Zed" of menu bar 1
 
@@ -37,33 +37,48 @@ tell application "System Events"
 
         delay 0.2 -- wait for the macOS animations to complete
 
-		-- 1. take a screenshot of a JSX file
+		-- 1. make a split-screenshot of a JSX file
 		tell me to do shell script "/usr/local/bin/zed -a ./fixtures/App.jsx"
-		delay 1 -- give the LSP server a second to bootstrap itself and to run the diagnostics
-		delay 0.2
-		tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/01-file-jsx.png"
+		delay 2 -- give the LSP server a second to bootstrap itself and to run the diagnostics
 
-		-- 2. take a screenshot of a Markdown file
+        -- take a screenshot with the current (light) theme
+		delay 0.2
+        tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/split-light.png"
+        tell me to do shell script "cp ./screenshots/docs/split-light.png ./screenshots/docs/07-file-jsx-light.png"
+
+        -- switch to dark theme and take another screenshot
+        tell me to do shell script "/opt/homebrew/bin/cliclick kd:cmd t:k kd:shift t:t ku:cmd,shift"
+		delay 0.2
+        tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/split-dark.png"
+
+        tell me to do shell script "/opt/homebrew/bin/magick screenshots/docs/split-dark.png \\( screenshots/docs/split-light.png \\( -size 3108x1864 xc:black -fill white -draw 'polygon 3108,0 3108,1864 0,1864' \\) -alpha off -compose CopyOpacity -composite \\) -compose Over -composite screenshots/docs/01-split.png"
+        tell me to do shell script "rm -f ./screenshots/docs/split-*.png"
+
+		-- 2. take a screenshot of a JSX file
+		delay 0.2
+		tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/02-file-jsx.png"
+
+		-- 3. take a screenshot of a Markdown file
 		tell me to do shell script "/usr/local/bin/zed -a ./fixtures/README.md"
 		delay 0.2
-		tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/02-file-markdown.png"
+		tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/03-file-markdown.png"
 
-		-- 3. take a screenshot of a Shell file
+		-- 4. take a screenshot of a Shell file
 		tell me to do shell script "/usr/local/bin/zed -a ./fixtures/upload-cli.sh"
 		delay 0.2
-		tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/03-file-shell.png"
+		tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/04-file-shell.png"
 
-		-- 4. take a screenshot of the Command Palette
+		-- 5. take a screenshot of the Command Palette
         click menu item "Command Palette..." of menu 1 of menu bar item "Go" of menu bar 1
 		delay 0.2
-        tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/04-command-palette.png"
+        tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/05-command-palette.png"
         click menu item "Command Palette..." of menu 1 of menu bar item "Go" of menu bar 1
 
-		-- 5. take a screenshot of the Terminal Panel
+		-- 6. take a screenshot of the Terminal Panel
 		click menu item "Terminal Panel" of menu 1 of menu bar item "View" of menu bar 1
-		delay 0.2 -- give the Terminal emulator enough time to bootstrap itself
+		delay 0.5 -- give the Terminal emulator enough time to bootstrap itself
 		delay 0.2
-		tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/05-terminal.png"
+		tell me to do shell script "screencapture -x -R" & rect & " ./screenshots/docs/06-terminal.png"
 		click menu item "Toggle Bottom Dock" of menu 1 of menu bar item "View" of menu bar 1
 		click menu item "Project Panel" of menu 1 of menu bar item "View" of menu bar 1
 

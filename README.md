@@ -4,15 +4,25 @@ A minimalist dark theme, port of the popular [Oceanic Next Color Scheme](https:/
 
 ## Preview
 
-![javascript](/screenshots/docs/01-file-jsx.png)
+![dark and light themes](/screenshots/docs/01-split.png)
 
-![markdown](/screenshots/docs/02-file-markdown.png)
+---
 
-![bash](/screenshots/docs/03-file-shell.png)
+<details><summary>More Screenshots</summary>
+    
+![javascript](/screenshots/docs/02-file-jsx.png)
+    
+![markdown](/screenshots/docs/03-file-markdown.png)
 
-![cmd-palette](/screenshots/docs/04-command-palette.png)
+![bash](/screenshots/docs/04-file-shell.png)
 
-![terminal](/screenshots/docs/05-terminal.png)
+![cmd-palette](/screenshots/docs/05-command-palette.png)
+
+![terminal](/screenshots/docs/06-terminal.png)
+
+![javascript light](/screenshots/docs/07-file-jsx-light.png)
+
+</details>
 
 ## Companion config & tweaks
 
@@ -29,14 +39,14 @@ Screenshots from the preview were generated with this extra config:
 
 One of the quickest feedback loops that I've achieved is through Zed's tasks. The `scripts/theme-generator.js` script interpolates the colors from `src/dark.js` and `src/light.js` in the `src/theme.template.json` and prints to stdout the theme in JSON format. This can be placed in a custom theme (e.g. `~/.config/zed/themes/oceanic-wip.json`) and the final step is to update Zed's settings to use that theme. Quickest way is `cmd-k cmd-t` (a.k.a Theme Selector). Putting everything together:
 
-```json
+```jsonc
 // ~/.config/zed/tasks.json
 [
     {
         "label": "Build Oceanic Next (WIP)",
         "command": "node scripts/theme-generator.js --wip > ~/.config/zed/themes/oceanic-wip.json",
-        "reveal": "never"
-    }
+        "reveal": "never",
+    },
 ]
 ```
 
@@ -57,6 +67,7 @@ There are a 2 AppleScript files in the `scripts` directory. One for taking the s
 - [ ] Hide desktop items: Settings -> Desktop & Dock -> Show items. Otherwise they might be visible in the docs screenshots.
 - [ ] Add `"cursor_blink": false` to Zed's settings. Blinking cursors might come up as a delta.
 - [ ] Close all open file tabs. `cmd-k w` should do the trick. Already opened tabs might come up as a delta. Close the Buffer Search toolbar too (pressing `Esc` should suffice).
+- [ ] Switch to Light theme variant.
 - [ ] Quit Zed. Otherwise a second window might be also visible in the screenshots.
 - [ ] Run from the root dir of the repo.
 - [ ] Run only with a clean `git status` and on `main` branch.
@@ -66,7 +77,9 @@ There are a 2 AppleScript files in the `scripts` directory. One for taking the s
 ```sh
 # Runs the script for taking the docs screenshots
 osascript scripts/docs-screenshots.applescript
+```
 
+```sh
 # Performs the visual regression and pretty-prints the delta
 osascript scripts/visual-regression.applescript | column -t -s ","
 ```
