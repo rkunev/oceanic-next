@@ -174,8 +174,8 @@ export const dark_version_control_modified = orange_500;
 export const dark_version_control_renamed = blue_500;
 export const dark_version_control_conflict = orange_500; // @todo no idea what this is and needs a revisit
 export const dark_version_control_ignored = cyan_700; // @todo no idea what this is; ayu-light uses a gray color
-export const dark_version_control_conflict_marker_ours = green_300; // @todo haven't tested this; one-dark uses the same bg as success_background
-export const dark_version_control_conflict_marker_theirs = neutral_900; // @todo haven't tested this; one-dark uses the same bg as info_background
+export const dark_version_control_conflict_marker_ours = withAlpha(cyan_700, 0.46);
+export const dark_version_control_conflict_marker_theirs = withAlpha(cyan_700, 0.25);
 
 // Terminal
 // bright colors are a hardcoded version of the regular color adjust by (-6% lightness, +5.3% chroma, +2 hue)
