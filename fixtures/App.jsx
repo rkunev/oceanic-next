@@ -19,7 +19,7 @@ export default function App() {
     return (
         <BrowserRouter>
             <ThemeContext.Provider value={theme}>
-                <div style={{ fontFamily: 'sans-serif' }}>
+                <div style={{ fontFamily: 'monospace' }}>
                     <div
                         style={{
                             margin: 20,
