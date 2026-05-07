@@ -41,4 +41,4 @@ export const neutral_400 = '#e9eeeeff'; // oklch(0.945 0.005 197)
 export const neutral_300 =  '#f4f6f6ff'; // oklch(0.972 0.002 197) | I really like #eff3f3ff which has a nice green tint, but I think not all people will like it as I do
 export const neutral_200 = '#fafbfbff'; // oklch(0.987 0.001 197)
 
-export const withAlpha = (value, opacity) => value.slice(0, -2) + Math.round(opacity * 255).toString(16);
+export const withAlpha = (value, opacity) => value.slice(0, -2) + Math.round(opacity * 255).toString(16).padStart(2, '0');
