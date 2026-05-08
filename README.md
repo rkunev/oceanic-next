@@ -57,7 +57,7 @@ To build the theme for publishing the extension: `node scripts/theme-generator.j
 
 ### Testing
 
-There are a 2 AppleScript files in the `scripts` directory. One for taking the screenshots for the documentation and another that performs visual regression testing. 100% repeatability between screenshots is impractical. The aim is to minimize the delta reported by ImageMagick, but expect to see red diff in the screenshot with the Git Panel and the Terminal dock. In order to achieve that, here's a preflight checklist:
+There are two AppleScript files in the `scripts` directory. One for taking the screenshots for the documentation and another that performs visual regression testing. 100% repeatability between screenshots is impractical. The aim is to minimize the delta reported by ImageMagick, but expect to see red diff in the screenshot with the Git Panel and the Terminal dock. In order to achieve that, here's a preflight checklist:
 
 - [ ] Install [cliclick](https://formulae.brew.sh/formula/cliclick). It automates mouse movements and clicks.
 - [ ] Provide autmation permissions to your terminal app:
